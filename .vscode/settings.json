@@ -1,0 +1,3 @@
+{
+    "python.pythonPath": "${workspaceFolder}/submissions/sprint_a/.venv/bin/python"
+}
