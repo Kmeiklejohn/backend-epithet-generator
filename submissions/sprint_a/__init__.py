@@ -9,3 +9,4 @@ def configure_app():
     PROJECT_ROOT = os.path.dirname(__file__)
     load_dotenv(os.path.join(PROJECT_ROOT, '.environment_vars'))
     return app
+
