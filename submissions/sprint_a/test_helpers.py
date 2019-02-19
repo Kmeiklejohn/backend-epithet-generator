@@ -50,6 +50,7 @@ class TestEpithet:
 
 class TestFlask:
     """test flask connections and json data"""
+    
     def test_json_data_index(self, client):
         res = client.get('/')
         assert res == 200
