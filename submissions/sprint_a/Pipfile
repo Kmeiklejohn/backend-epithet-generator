@@ -9,6 +9,10 @@ pytest = "*"
 [packages]
 flask = "*"
 python-dotenv = "*"
+pytest = "*"
+pytest-flask = "*"
+tinydb = "*"
+flask-testing = "*"
 
 [requires]
 python_version = "3.7"
