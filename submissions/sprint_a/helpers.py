@@ -57,11 +57,14 @@ class EpithetGenerator(object):
     epithet_list = []
 
     def random_word(self, column):
+        """randomn number generator"""
         random_item = random.choice(column)    
         return random_item 
 
     def epithet_gen(self, path_json, num):
-        
+        """Returns a random epithet from the three columns of vocab"""
+        self.epithet_list = []
+
         for i in range(num):   
             data = self.files.read_json(path_json)
             column1 = data['Column 1']
@@ -71,11 +74,18 @@ class EpithetGenerator(object):
             vocab1 = self.random_word(column1)
             vocab2 = self.random_word(column2)
             vocab3 = self.random_word(column3)
-            epithet = f'Thou {vocab1} {vocab2}  {vocab3}'
+            epithet = f'Thou {vocab1} {vocab2} {vocab3}'
             self.epithet_list.append(epithet)
             
         return self.epithet_list
 
     def vocab_data(self, path_json):
+        """Returns the vocab used for the epithet"""
+
         vocab_data = self.files.read_json(path_json)
         return vocab_data
+
+    def random_num(self):
+        return random.randint(1, 50)
+    
+    
